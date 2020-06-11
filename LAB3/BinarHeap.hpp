@@ -74,8 +74,6 @@ public:
             this->size--;
             this->heapSort(0);
         }
-        else
-            std::cout << "Error!";
     }
     T searchValue(int index) {
         if (index > this->size || index < 0) throw std::out_of_range(IndexOutOfRange);
