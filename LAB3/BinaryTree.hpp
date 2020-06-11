@@ -88,17 +88,8 @@ private:
 	}
 	Node* get(Node* node) {
 		if (node == nullptr) return nullptr;
-		if (node->right != nullptr) {
 			node = node->right;
-			while (node->left != nullptr) {
-				node = node->left;
-			}
 			return node;
-		}
-		else if (node->parent->left == node) {
-			return node->parent;
-		}
-		else return nullptr;
 	}
 	void deleter(Node* node) {
 		if (node == nullptr) return;
@@ -161,11 +152,6 @@ public:
 		if (this->tree == nullptr) { std::cout << "Erorr!" << std::endl; return; }
 		show(this->tree);
 		std::cout << "\nroot " << this->tree->key;
-	}
-	T get(const T key) {
-		Node* node = search(key);
-		if (node == nullptr) return 0;
-		return node->key;
 	}
 	int getSize() { return this->size; }
 	T min() {
