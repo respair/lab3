@@ -74,7 +74,8 @@ void TestBinarHeap() {
 		for (auto i = 0; i < 5; i++) h.Add(i);
 		h.deleteIn(0);
 		int tmp[5] = { 3,2,2,0,1 };
-		int* temp = new int[h.getSize()];
+		int* temp = new int[5];
+		temp[0] = 0;
 		for (int j = 0; j < h.getSize(); j++) {
 			temp[j] = h.searchValue(j);
 		}
@@ -87,7 +88,8 @@ void TestBinarHeap() {
 		for (auto i = 0; i < 5; i++) h.Add(i);
 		h.deleteIn(3);
 		int tmp[5] = { 4,2,3,1,2 };
-		int* temp = new int[h.getSize()];
+		int* temp = new int[5];
+		temp[0] = 0;
 		for (int j = 0; j < h.getSize(); j++) {
 			temp[j] = h.searchValue(j);
 		}
