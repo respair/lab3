@@ -158,7 +158,7 @@ public:
 	}
 	void show()
 	{
-		if (this->tree == nullptr) return;
+		if (this->tree == nullptr) { std::cout << "Erorr!" << std::endl; return; }
 		show(this->tree);
 		std::cout << "\nroot " << this->tree->key;
 	}
