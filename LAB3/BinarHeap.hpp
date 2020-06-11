@@ -42,7 +42,7 @@ public:
         delete[] this->heap;
         this->heap = tmp;
         this->size++;
-        this->heapSort(0);
+        //this->heapSort(0);
     }
     void heapSort(int i) {
         if (i > this->size || i < 0) throw std::out_of_range(IndexOutOfRange);
