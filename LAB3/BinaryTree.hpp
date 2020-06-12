@@ -88,8 +88,17 @@ private:
 	}
 	Node* get(Node* node) {
 		if (node == nullptr) return nullptr;
+		if (node->right != nullptr) {
 			node = node->right;
+			 while (node->left != nullptr) {
+				node = node->left;
+			}
 			return node;
+		}
+		else if (node->parent->left == node) {
+			return node->parent;
+		}
+		else return nullptr;
 	}
 	void deleter(Node* node) {
 		if (node == nullptr) return;
